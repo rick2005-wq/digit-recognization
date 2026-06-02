@@ -1,109 +1,96 @@
-README.md
-# Neural Vision Interface
+# Neural Vision Interface ✨
 
-An interactive handwritten digit recognition system featuring realtime neural activity visualization, confidence analytics, animated neuron mapping, and a futuristic cyberpunk-inspired UI.
-
----
-
-
-## Features
-
-- Realtime handwritten digit recognition
-- Interactive drawing canvas
-- Live confidence graph
-- Animated neural network visualization
-- Pulsing neuron activity simulation
-- Signal flow animation between layers
-- Top prediction tracking
-- Prediction history
-- 28×28 preprocessing preview
-- Realtime preprocessing pipeline
-- Cyberpunk-inspired futuristic interface
-- Fullscreen immersive UI
+An interactive handwritten digit recognition web application featuring a stunning **cyberpunk-inspired UI**, real-time CNN intermediate activation visualization, and dynamic animated data flows built entirely on top of **Streamlit**.
 
 ---
 
-## Tech Stack
+## 🚀 Features
 
-- Python
-- TensorFlow / Keras
-- OpenCV
-- Tkinter
-- NumPy
-- Pillow (PIL)
+- **Futuristic Deep Web UI**: Pure cyberpunk aesthetics with custom CSS, Orbitron fonts, glassmorphism panels, and scanline overlays.
+- **Real-time Recognition**: Draw digits and predict them instantly via a highly accurate internal CNN model.
+- **Live Neural Architecture Visualizer**: An advanced JS/SVG-powered neural network map that illustrates *exactly* what the CNN is seeing.
+  - Features real-time activation magnitudes on hidden layers.
+  - Pulsing animated signal flow (particles) along the connections.
+  - Intelligent output node highlighting (unselected nodes dim, winning nodes burst with light).
+- **Infinite Prediction History**: Scrollable tape of your session's drawing history, always available underneath the drawing canvas.
+- **Interactive Confidence Analytics**: Plotly-powered probabilistic probability charts.
+- **Robust MNIST Preprocessing**: Custom backend pipeline scales strokes automatically into strict 20x20 bounding boxes using a center-of-mass algorithm to match training accuracy exactly.
 
 ---
 
-## Project Structure
+## 🛠️ Tech Stack
+
+- **Frontend**: Streamlit, HTML/CSS/JS (embedded)
+- **Deep Learning**: TensorFlow / Keras
+- **Image Processing**: OpenCV, Pillow (PIL)
+- **Data & Math**: NumPy
+- **Charting**: Plotly
+
+---
+
+## 📂 Project Structure
 
 ```text
 Neural-Vision-Interface/
 │
 ├── model/
-│   └── digit_model.keras
+│   └── digit_model.keras       # Trained CNN model
 │
-├── screenshots/
-│   ├── main_ui.png
-│   ├── neural_map.png
-│   └── prediction_demo.png
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── LICENSE
+├── app_streamlit.py            # Main Streamlit Cyberpunk Web Application
+├── train.py                    # Script to generate the CNN model
+├── requirements.txt            # Dependency list
+├── README.md                   # Documentation
 └── .gitignore
-Neural Visualization System
+```
 
-The application includes a custom neural activity visualizer that simulates:
+---
 
-neuron activation
-signal propagation
-active pathway highlighting
-output layer confidence response
+## 💻 Running Locally
 
-The visualization updates in realtime during prediction.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rick2005-wq/digit-recognization.git
+   cd digit-recognization
+   ```
 
-screenshots:
-GUI
-![alt text](image-5.png)
+2. **Install dependencies:**
+   Make sure you are working in an active Python virtual environment!
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Accuracy Graph
-![alt text](image.png)
+3. **Run the Streamlit Application:**
+   ```bash
+   streamlit run app_streamlit.py
+   ```
 
-Loss Graph
-![alt text](image-1.png)
+4. **Train your own model (Optional):**
+   If you want to view the training accuracy and loss charts, simply run:
+   ```bash
+   python train.py
+   ```
 
-Confusion Matrix
-![alt text](image-2.png)
+---
 
-Sample Predictions
-![alt text](image-3.png)
+## ☁️ Deploy to Streamlit Community Cloud
 
-Run Project
+Hosting this application live on the web is incredibly simple and entirely free:
+1. Ensure your latest commits are pushed to this GitHub repository.
+2. Visit [Streamlit Community Cloud (share.streamlit.io)](https://share.streamlit.io) and log in with your GitHub account.
+3. Click the **"New app"** button.
+4. Fill in the data:
+   * **Repository:** `rick2005-wq/digit-recognization`
+   * **Branch:** `main`
+   * **Main file path:** `app_streamlit.py`
+5. Click **Deploy!** Streamlit handles everything automatically from `requirements.txt`.
 
-Install dependencies:
+---
 
-pip install -r requirements.txt
+## 🔭 Future Concepts
+- Multi-digit sequential OCR
+- Extended support for EMNIST datasets
+- Grad-CAM direct overlay visualizations
+- Adding native live webcam processing directly into the app structure
 
-Run GUI:
-
-python app.py
-
-Train model:
-
-python train.py
-
-Future Improvements:
-Multi-digit OCR
-EMNIST support
-Live webcam recognition
-Grad-CAM visualization
-Flask web deployment
-Real-time inference benchmarking
-
-Inspiration
-Inspired by futuristic AI interfaces and neural visualization systems.
-
-Author: Debarghya
-
-License: MIT License
+**Author:** Debarghya
+**License:** MIT License
