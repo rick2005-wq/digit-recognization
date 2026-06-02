@@ -5,3 +5,4 @@ pillow
 streamlit
 streamlit-drawable-canvas
 plotly
+scipy
